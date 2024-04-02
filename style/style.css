@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(to bottom, #f7f7f7, #8f8d8d);
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f5f5f5;
+    padding: 70px 0px;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 25px;
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    padding-bottom: 5px;
+    color: #111111;
+    display: block;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+    margin-right: 3rem;
+    margin-top: 12px;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur (10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #1f1f1f56;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    color: #ffffff;
+}
+
+.borrar {
+    background-color: #111111;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 200px;
+}
+
+.header-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.header-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.header-txt h1 {
+    font-size: 90px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.header-txt p {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 25px;
+    background-color: #111111;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.oferta {
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.oferta-1 {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(33.3% - 15px);
+    background-color: #f5f5f5;
+    padding: 35px;
+    border-radius: 70px;
+}
+
+.oferta-img {
+    flex-basis: 50%;
+    margin-right: 15px;
+}
+
+.oferta-img img {
+    width: 250px;
+}
+
+.oferta-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.oferta-txt h3 {
+    color: #111111;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #111111;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 22px;
+}
+
+.btn-3 {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #111111;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 22px;
+    margin-left: 117px;
+}
+
+.productos {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.productos h2 {
+    color: #111111;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.productos-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.producto {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 033.3%);
+}
+
+.producto h3 {
+    font-size: 20px;
+    color: #111111;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.producto p,
+.precio {
+    font-size: 16px;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-weight: 800;
+}
+
+.footer {
+    padding: 50px 0;
+    background: linear-gradient(to top, #000000, #050000);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.link a {
+    font-size: 16px;
+    color: #dcdcdc;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999;
+}
+
+.login-container,
+.register-container {
+    display: none;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5); 
+}
+
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.fondoReg {
+    background-image: url(../imagenes/logoathena.png);
+    background-size: 160px 145px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 10rem;
+}
+
+.fondoReg2 {
+    background-image: url(../imagenes/logoathena.png);
+    background-size: 160px 145px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 9rem;
+}
+
+.cfgText {
+    width: 14rem;
+}
+
+#registerBtn,
+#loginBtn {
+    margin-top: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.message {
+    margin-top: 10px;
+}
+
+.register-container {
+    margin-top: 20px;
+}
+
+/* Estilo para el botón Logout */
+#logoutBtn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    /*margin-right: 150px;  Espacio entre el botón y el carrito */
+    margin-top: 22px;
+}
+
+/* Estilo para el contenedor del carrito */
+#carrito {
+    position: relative; /* Para que el botón Logout se posicione relativo a este contenedor */
+}
+
+/* Posicionamiento del botón Logout */
+#logoutBtn {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    border: 1px solid #333;
+}
+
+.btn-primary {
+    padding: 2px;
+}
+
+.btn-secondary {
+    padding: 2px;
+}
+
+#error-message {
+    width: 360px;
+    height: 100px;
+    background-color: rgb(243 189 144);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #3e0c0c;
+    color: #000000;
+    text-align: center;
+    padding-top: 33px;
+    z-index: 9999;
+    border-radius: 9px;
+    font-size: 20px;
+}
+
+#error-message button {
+    position: absolute;
+    padding-right: 10px;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-footer {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap)* .5);
+    background-color: var(--bs-modal-footer-bg);
+    border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+    border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+    border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+    align-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Podrías ajustar esto a un tamaño específico si prefieres */
+}
+
+
+/*******MEDIA-QUERIES*******/
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: o;
+        right: 0;
+        background-color: #111111;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    .menu .navbar ul li a {
+        color: #f5f5f5;
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .submenu:hover #carrito {
+        min-width: 100%;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-txt {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .header-txt h1 {
+        font-size: 60px;
+    }
+
+    .oferta {
+        padding: 30px 30px 0 30px;
+        flex-direction: column;
+    }
+
+    .oferta-1 {
+        margin-bottom: 30px;
+    }
+
+    .productos {
+        padding: 0 30px 30px 30px;
+    }
+
+    .productos h2 {
+        margin-bottom: 30px;
+    }
+
+    .productos-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .producto-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
