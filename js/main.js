@@ -77,5 +77,3 @@ const productos = [
 let productosJSON = JSON.stringify(productos);
 
 localStorage.setItem('productos', productosJSON);
-
-

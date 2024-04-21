@@ -27,6 +27,18 @@ img {
     padding: 70px 0px;
 }
 
+.headerCatalogo {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 70px 0px;
+}
+
+.catalogoFlex {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .menu {
     position: absolute;
     top: 0;
@@ -130,6 +142,7 @@ td {
 .header-txt {
     flex-basis: 50%;
     text-align: center;
+    margin-left: 5%;
 }
 
 .header-txt h1 {
@@ -298,7 +311,7 @@ td {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
 }
 
@@ -311,7 +324,7 @@ td {
     border-radius: 5px;
     text-align: center;
     background-color: #fff;
-    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -371,7 +384,8 @@ td {
 
 /* Estilo para el contenedor del carrito */
 #carrito {
-    position: relative; /* Para que el botón Logout se posicione relativo a este contenedor */
+    position: relative;
+    /* Para que el botón Logout se posicione relativo a este contenedor */
 }
 
 /* Posicionamiento del botón Logout */
@@ -432,12 +446,15 @@ td {
     align-content: center;
     align-items: center;
 }
+
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% desde la parte superior y centrado */
+    margin: 15% auto;
+    /* 15% desde la parte superior y centrado */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Podrías ajustar esto a un tamaño específico si prefieres */
+    width: 80%;
+    /* Podrías ajustar esto a un tamaño específico si prefieres */
 }
 
 
@@ -537,4 +554,414 @@ td {
         flex-direction: column;
         text-align: center;
     }
+}
+
+
+/* TODO AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+.productos2 {
+    padding: 0 30px 30px 30px;
+}
+
+.productos2 h2 {
+    margin-bottom: 30px;
+}
+
+.productos-content2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+.producto-img2 {
+    width: 200px;
+    height: 200px;
+}
+
+
+.productos2 {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.productos2 h2 {
+    color: #111111;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.91), -1px 1px 0px rgb(255, 255, 255, 0.91), 1px -1px 0px rgb(255, 255, 255, 0.91), -1px -1px 0px rgb(255, 255, 255, 0.91);
+}
+
+.productos-content2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.producto2 {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 033.3%);
+}
+
+.producto2 h3 {
+    font-size: 20px;
+    color: #111111;
+    text-transform: uppercase;
+    
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.91), -1px 1px 1px rgb(255, 255, 255, 0.91), 1px -1px 1px rgb(255, 255, 255, 0.91), -1px -1px 1px rgb(255, 255, 255, 0.91);
+}
+
+.producto2 p,
+.precio2 {
+    font-size: 16px;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 1px -1px 3px rgba(255, 255, 255, 0.91), -1px 1px 3px rgb(255, 255, 255, 0.91), 1px -1px 3px rgb(255, 255, 255, 0.91), -1px -1px 3px rgb(255, 255, 255, 0.91);
+}
+
+
+.darkmode--activated p {
+    color: #fff;
+}
+
+.darkmode--activated .navbar {
+    background-color: #333;
+}
+
+.header-chica {
+    box-shadow: inset 0px 0px 20px 222px #ffffff, 0px 0px 20px 20px #ffffff;
+}
+
+.whiteTxt  {
+    text-shadow: 1px 1px 0px rgb(0 0 0 / 91%), -1px 1px 0px rgb(0 0 0), 1px -1px 0px rgb(0 0 0), -1px -1px 0px rgb(0 0 0);
+}
+
+.darkmode--activated .navbar {
+    background-color: #fff;
+}
+
+.logo {
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.91), -1px 1px 0px rgb(255, 255, 255, 0.91), 1px -1px 0px rgb(255, 255, 255, 0.91), -1px -1px 0px rgb(255, 255, 255, 0.91);
+}
+
+.img-carrito {
+    background-color: #fff;
+}
+
+/* Estilos para modales en modo oscuro */
+.darkmode--activated .submenu:hover #carrito {
+    background-color: white; 
+    color: black; /* Color del texto del modal en modo oscuro */
+    border-radius: 5px;
+}
+
+.darkmode--activated td {
+    color:#000000;
+}
+
+.darkmode--activated .navbar {
+    border-radius: 10px;
+}
+
+
+.prenda2 {
+    width: 120px;
+    height: 180px;
+    border: 1px solid #ccc;
+    margin: 5%;
+    text-align: center;
+}
+
+.catalogo2 {
+    display: grid;
+    justify-items: center;
+}
+
+.rectangulo2 {
+    background-color: #f0f0f0; /* Color de fondo predeterminado */
+    border: 2px solid #000; /* Borde negro */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 10px; /* Espacio entre rectángulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Cambiar cursor al pasar sobre el rectángulo */
+    position: relative; /* Posición relativa para que el posicionamiento absoluto sea relativo a este contenedor */
+    width: 557px;
+    height: 601px;
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+    color: #000000;
+    font-size: 25px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.91), -1px 1px 0px rgb(255, 255, 255, 0.91), 1px -1px 0px rgb(255, 255, 255, 0.91), -1px -1px 0px rgb(255, 255, 255, 0.91);
+}
+
+#volverBtn2 {
+    display: flex;
+    margin-bottom: 2%;
+    margin-left: 50%;
+    padding: 5px;
+}
+
+.categorias2 {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos-content2 {
+    background-color: rgb(90, 53, 254);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+.producto2 {
+    height: 400px;
+    width: 500px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangulo2 img {
+    position: absolute; /* Posición absoluta para poder mover la imagen dentro del contenedor */
+    bottom: 100px; /* Posición inicial en la parte superior del contenedor */
+    left: 50px; /* Posición inicial en la parte izquierda del contenedor */
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupará todo el alto del contenedor */
+}
+
+/* ImagenesPre Catalogo */
+
+#remerasCatalogo {
+    background-image: url(../imagenes/remera-seis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pantalonesCatalogo {
+    background-image: url(../imagenes/pantalon-cuatro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#zapatosCatalogo {
+    background-image: url(../imagenes/calzado-dos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#buzosCatalogo {
+    background-image: url(../imagenes/buzos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#camperasCatalogo {
+    background-image: url(../imagenes/logo-encabezado.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#vestidosCatalogo {
+    background-image: url(../imagenes/vestido-cuatro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* Imagenes posterior al Catalogo */
+
+/* remeras */
+
+#remeras1producto2 {
+    background-image: url(../imagenes/catalogo/remeras/remera-cinco.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#remeras2producto2 {
+    background-image: url(../imagenes/catalogo/remeras/remera-cuatro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#remeras3producto2 {
+    background-image: url(../imagenes/catalogo/remeras/remera-dos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#remeras4producto2 {
+    background-image: url(../imagenes/catalogo/remeras/remera-seis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+
+/* pantalones */
+#pantalones1producto2 {
+    background-image: url(../imagenes/catalogo/pantalones/pantalon-dos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#pantalones2producto2 {
+    background-image: url(../imagenes/catalogo/pantalones/pantalon-tres.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#pantalones3producto2 {
+    background-image: url(../imagenes/catalogo/pantalones/pantalon-cinco.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#pantalones4producto2 {
+    background-image: url(../imagenes/catalogo/pantalones/pantalon-seis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* zapatos */
+#zapatos1producto2 {
+    background-image: url(../imagenes/catalogo/zapatos/calzado-uno.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#zapatos2producto2 {
+    background-image: url(../imagenes/catalogo/zapatos/calzado-dos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#zapatos3producto2 {
+    background-image: url(../imagenes/catalogo/zapatos/calzado-tres.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#zapatos4producto2 {
+    background-image: url(../imagenes/catalogo/zapatos/calzado-cuatro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* vestidos */
+
+#vestidos1producto2 {
+    background-image: url(../imagenes/catalogo/vestidos/right.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#vestidos2producto2 {
+    background-image: url(../imagenes/catalogo/vestidos/vestido-uno.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#vestidos3producto2 {
+    background-image: url(../imagenes/catalogo/vestidos/vestido-dos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#vestidos4producto2 {
+    background-image: url(../imagenes/catalogo/vestidos/vestido-tres.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#vestidos5producto2 {
+    background-image: url(../imagenes/catalogo/vestidos/vestido-cuatro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#vestidos6producto2 {
+    background-image: url(../imagenes/catalogo/vestidos/vestido-cinco.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#vestidos7producto2 {
+    background-image: url(../imagenes/catalogo/vestidos/vestido-seis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* buzos */
+
+#buzos1producto2 {
+    background-image: url(../imagenes/catalogo/buzos/f2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
