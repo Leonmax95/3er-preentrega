@@ -14,15 +14,84 @@ img {
     max-width: 100%;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#response {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.header {
+.headerIndex {
     display: flex;
     align-items: center;
     min-height: 80vh;
+    background-color: #f5f5f5;
+    padding: 70px 0px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    min-height: 50%;
     background-color: #f5f5f5;
     padding: 70px 0px;
 }
@@ -132,6 +201,9 @@ td {
     align-items: center;
     flex: 1;
     padding: 0 200px;
+    padding-top: 33px;
+    margin-top: 5rem;
+    padding-bottom: 33px;
 }
 
 .header-img {
@@ -141,8 +213,9 @@ td {
 
 .header-txt {
     flex-basis: 50%;
+    margin-left: 3rem;
     text-align: center;
-    margin-left: 5%;
+    margin-left: 7%;
 }
 
 .header-txt h1 {
@@ -205,9 +278,9 @@ td {
 
 .btn-2 {
     display: inline-block;
-    padding: 7px 10px;
-    background-color: #111111;
-    color: #ffffff;
+    padding: 7px 8px;
+    background-color: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 15px;
     margin-top: 22px;
@@ -391,9 +464,9 @@ td {
 /* Posicionamiento del botón Logout */
 #logoutBtn {
     position: absolute;
-    top: 6px;
-    right: 0;
-    border: 1px solid #333;
+    top: 26px;
+    right: 41px;
+    border: 1px solid rgb(51, 51, 51);
 }
 
 .btn-primary {
@@ -456,6 +529,118 @@ td {
     width: 80%;
     /* Podrías ajustar esto a un tamaño específico si prefieres */
 }
+
+
+.bodyContact {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 90vh;
+    margin-top: 4%;
+    /* padding-top: 10%; */
+}
+
+#nosotros {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.acomoP1 {
+    margin-top: 17%;
+}
+
+/* Estilos para el cuerpo */
+.bodyNosotros {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Estilos para el encabezado */
+.headerNosotros {
+    background-color: #8dc63f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos para el contenido principal */
+.mainNosotros {
+    padding: 20px;
+}
+
+/* Estilos para la sección "Nosotros" */
+.sectionNosotros {
+    margin-bottom: 20px;
+}
+
+/* Estilos para el pie de página */
+.footerNosotros {
+    background-color: #f4a44dcc;
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+/* Estilos para el contenido del pie de página */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#acomHeadCon {
+    display: flex;
+    align-items: center;
+    min-height: 50%;
+    background-color: #f5f5f5;
+    padding: 35px 0px;
+}
+
+/* Estilos para las secciones del pie de página */
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilos para los enlaces del pie de página */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#acomContact {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Estilos para la sección inferior del pie de página */
+.footer-bottom {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
 
 
 /*******MEDIA-QUERIES*******/
@@ -631,6 +816,7 @@ td {
 
 .header-chica {
     box-shadow: inset 0px 0px 20px 222px #ffffff, 0px 0px 20px 20px #ffffff;
+    width: 100%;
 }
 
 .whiteTxt  {
@@ -965,3 +1151,5 @@ td {
     background-size: cover;
     
 }
+
+

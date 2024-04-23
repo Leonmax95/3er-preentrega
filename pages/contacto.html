@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 
-<body>
+<body class="bodyContact">
 
     <!--ENCABEZADO-->
 
-    <header class="header">
+    <header class="header" id="acomHeadCon">
 
         <div class="menu-container menu container">
             <a href="/index.html" class="logo">ATHENA INDUMENTARIA</a>
@@ -30,9 +30,8 @@
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="../pages/catalogo.html">Catálogo</a></li>
-                    <li><a href="../pages/envios.html">Envíos y devoluciónes</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
                     <li><a href="../pages/nosotros.html">Nosotros</a></li>
                 </ul>
@@ -63,3 +62,57 @@
             </div>
         </div>
     </header>
+
+    <div class="container" id="acomContact">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="response"></div>
+    </div>
+    <script src="../js/contacto.js"></script>
+</body>
+
+
+    <!-- Pie de página -->
+    <footer class="footerNosotros">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos una tienda de indumentaria femenina en Palermo, Buenos Aires. Nuestra misión es ofrecer moda de calidad y última tendencia a precios accesibles.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p>Dirección: Av. Córdoba 1234, Palermo, Buenos Aires</p>
+                <p>Teléfono: (011) 1234-5678</p>
+                <p>Email: info@athenaindumentaria.com</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/catalogo.html">Catalogo</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Athena Indumentaria | Todos los derechos reservados
+        </div>
+    </footer>
+
+</body>
+
+</html>
