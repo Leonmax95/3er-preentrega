@@ -4,9 +4,9 @@ new Darkmode({
     // Otras opciones de configuración...
 }).showWidget();
 
-document.getElementById('darkModeToggle').onclick = function () {
+const darkStyles = document.getElementById('darkModeToggle');
+
+darkStyles && darkStyles.addEventListener('click', () => {
     const darkmode = new Darkmode();
     darkmode.toggle();
-}
-
-
+});

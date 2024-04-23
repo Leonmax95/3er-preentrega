@@ -1,6 +1,6 @@
 
-document.getElementById('descargarResumen').addEventListener('click', async function() {
-   
+document.getElementById('descargarResumen').addEventListener('click', async function () {
+
     let resumenCompraHTML = generarResumenCompra(carrito);
 
     let resumenCompraJSON = `<div>${resumenCompraHTML}</div>`;
@@ -23,16 +23,16 @@ document.getElementById('descargarResumen').addEventListener('click', async func
 
 
 document.getElementById('cerrarModal').addEventListener('click', function () {
-    
+
     vaciarCarrito();
 
-    
+
     let agradecimientoModal = new bootstrap.Modal(document.getElementById('agradecimientoModal'));
     agradecimientoModal.hide();
 
     console.log(JSON.stringify(carrito) + " Carrito vaciado");
 
-   
+
     [...document.querySelectorAll('.modal.show')].forEach(modal => {
         let bootstrapModal = bootstrap.Modal.getInstance(modal);
         bootstrapModal.hide();
