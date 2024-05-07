@@ -30,13 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error al cargar los tipos de prendas:', error));
 
-
-
-
     //INDUMENTARIA DENTRO DE CADA CATALOGO 
-
-
-
 
 
     // Función para mostrar las prendas disponibles para un tipo de prenda específico
@@ -73,11 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     h3.textContent = prenda.nombre;
 
                     const pDescripcion = document.createElement('p');
-                    pDescripcion.textContent = `Descripción: ${prenda.descripcion}`;
+                    pDescripcion.textContent = `Descripción: Sin Stock`;
 
                     const pPrecio = document.createElement('p');
                     pPrecio.classList.add('Precio2');
-                    pPrecio.textContent = `Precio: $${prenda.precio}`;
+                    pPrecio.textContent = `Precio: Sin Stock`;
 
                     const btnAgregar = document.createElement('button');
                     btnAgregar.classList.add('agregar-carrito2', 'btn-2');
@@ -131,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Evento para volver al catálogo principal al hacer clic en el botón de volver
     volverBtn2.addEventListener('click', () => {
-        window.location.href = '../pages/catalogo.html';
+        window.location.href = '../proximamente.html';
     });
 
     // Establecer estilos de grid para el contenedor de catálogo

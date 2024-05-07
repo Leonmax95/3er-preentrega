@@ -30,6 +30,21 @@ function renderizarCarrito() {
     });
 }
 
+let logoutBtn = document.getElementById('logoutBtn');
+
+logoutBtn.addEventListener('click', function () {
+    console.log("Logout button clicked");
+    localStorage.removeItem('registeredEmail');
+    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem('isLoggedIn');
+    window.location.href = './index.html';
+});
+
+let closeErrorBtn = document.getElementById('close-error-btn');
+closeErrorBtn.addEventListener('click', function () {
+    errorMessage.style.display = 'none'; // Oculta el mensaje de error al hacer clic en el botón de cierre
+});
+
 function vaciarCarrito() {
     carrito = [];
     localStorage.removeItem('carrito'); // Elimina el contenido del carrito en localStorage
@@ -98,3 +113,57 @@ window.vaciarCarrito = vaciarCarrito;
 
 
 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const realizarCompraBtn = document.getElementById('realizarCompraBtn');
+    const finalizarCompraBtn = document.getElementById('finalizar-compra');
+
+    if (finalizarCompraBtn) {
+        finalizarCompraBtn.addEventListener('click', function () {
+            let resumenCompra = generarResumenCompra(carrito);
+            document.getElementById('resumenCompraBody').innerHTML = resumenCompra;
+
+            let resumenCompraModal = new bootstrap.Modal(document.getElementById('resumenCompraModal'));
+            resumenCompraModal.show();
+        });
+
+        // Agregar el event listener para realizar la compra
+        realizarCompraBtn.addEventListener('click', function () {
+            realizarCompra(carrito);
+            let agradecimientoModal = new bootstrap.Modal(document.getElementById('agradecimientoModal'));
+            agradecimientoModal.show();
+        });
+    }
+});
+
+//Utilizacion de sintaxis avanzada en una funcion "común" a funcion "flecha"
+const modals = document.querySelectorAll('.modal');
+
+modals.forEach(modal => {
+    modal.addEventListener('hidden.bs.modal', () => {
+        document.body.classList.remove('modal-open');
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+        if (modalBackdrop) {
+            modalBackdrop.parentNode.removeChild(modalBackdrop);
+        }
+    });
+});
+
+
+function generarResumenCompra(carrito) {
+    let total = 0;
+    let resumen = '<h5>Resumen de la compra:</h5><ul>';
+    carrito.forEach(function (producto) {
+        resumen += `<li><img src='${producto.imagen}' width="50"> ${producto.nombre} - $${producto.precio}</li>`;
+        total += producto.precio;
+    });
+    resumen += `</ul><p>Total: $${total}</p>`;
+    return resumen;
+}
+
+function realizarCompra(carrito) {
+    console.log('Compra realizada');
+    let agradecimientoModal = new bootstrap.Modal(document.getElementById('agradecimientoModal'));
+    agradecimientoModal.show();
+}

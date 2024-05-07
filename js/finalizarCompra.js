@@ -1,29 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-
     const realizarCompraBtn = document.getElementById('realizarCompraBtn');
+    const finalizarCompraBtn = document.getElementById('finalizar-compra');
 
+    if (finalizarCompraBtn) {
+        finalizarCompraBtn.addEventListener('click', function () {
+            let resumenCompra = generarResumenCompra(carrito);
+            document.getElementById('resumenCompraBody').innerHTML = resumenCompra;
 
-    document.getElementById('finalizar-compra').addEventListener('click', function () {
+            let resumenCompraModal = new bootstrap.Modal(document.getElementById('resumenCompraModal'));
+            resumenCompraModal.show();
+        });
 
-        let resumenCompra = generarResumenCompra(carrito);
-
-
-        document.getElementById('resumenCompraBody').innerHTML = resumenCompra;
-
-
-        let resumenCompraModal = new bootstrap.Modal(document.getElementById('resumenCompraModal'));
-        resumenCompraModal.show();
-    });
-
-
-    document.getElementById('realizarCompraBtn').addEventListener('click', function () {
-        realizarCompra(carrito);
-    });
-
-    document.getElementById('realizarCompraBtn').addEventListener('click', function () {
-        let agradecimientoModal = new bootstrap.Modal(document.getElementById('agradecimientoModal'));
-        agradecimientoModal.show();
-    });
+        // Agregar el event listener para realizar la compra
+        realizarCompraBtn.addEventListener('click', function () {
+            realizarCompra(carrito);
+            let agradecimientoModal = new bootstrap.Modal(document.getElementById('agradecimientoModal'));
+            agradecimientoModal.show();
+        });
+    }
 });
 
 //Utilizacion de sintaxis avanzada en una funcion "común" a funcion "flecha"
@@ -40,34 +34,19 @@ modals.forEach(modal => {
 });
 
 
-
-
-
-
-
-
 function generarResumenCompra(carrito) {
     let total = 0;
-
-
     let resumen = '<h5>Resumen de la compra:</h5><ul>';
     carrito.forEach(function (producto) {
         resumen += `<li><img src='${producto.imagen}' width="50"> ${producto.nombre} - $${producto.precio}</li>`;
         total += producto.precio;
     });
     resumen += `</ul><p>Total: $${total}</p>`;
-
     return resumen;
 }
 
-
 function realizarCompra(carrito) {
-
     console.log('Compra realizada');
-
-
     let agradecimientoModal = new bootstrap.Modal(document.getElementById('agradecimientoModal'));
     agradecimientoModal.show();
 }
-
-

@@ -1,4 +1,4 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -8,5 +8,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         return;
     }
     document.getElementById('response').innerText = 'Enviando mensaje...';
-    // Aquí iría el código para enviar el formulario, como una solicitud AJAX
+    // Aquí iría el código para enviar el formulariO
 });
